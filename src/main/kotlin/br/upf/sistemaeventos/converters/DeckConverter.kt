@@ -1,4 +1,4 @@
-package br.upf.sistemadecks.converters
+package br.upf.sistemaeventos.converters
 
 import br.upf.sistemaeventos.dtos.DeckResponseDTO
 import br.upf.sistemaeventos.model.Deck
@@ -10,7 +10,7 @@ class DeckConverter {
     fun toDeck(dto: DeckDTO): Deck {
         return Deck(
             nome = dto.nome,
-            cartas = listOf()
+            carta = listOf()
         )
     }
 
@@ -18,7 +18,7 @@ class DeckConverter {
         return DeckResponseDTO(
             id = deck.id,
             nome = deck.nome,
-            carta = deck.cartas
+            carta = deck.carta
         )
     }
 }

@@ -1,6 +1,7 @@
 package br.upf.sistemaeventos.repository
 
 import br.upf.sistemaeventos.model.Deck
+import jakarta.persistence.Entity
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository

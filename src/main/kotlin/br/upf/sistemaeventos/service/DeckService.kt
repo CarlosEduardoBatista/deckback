@@ -1,6 +1,6 @@
 package br.upf.sistemaeventos.service
 
-import br.upf.sistemadecks.converters.DeckConverter
+import br.upf.sistemaeventos.converters.DeckConverter
 import br.upf.sistemaeventos.dtos.DeckDTO
 import br.upf.sistemaeventos.dtos.DeckResponseDTO
 import br.upf.sistemaeventos.exceptions.NotFoundException

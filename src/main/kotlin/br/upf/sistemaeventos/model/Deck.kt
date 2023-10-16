@@ -1,7 +1,12 @@
 package br.upf.sistemaeventos.model
 
+import jakarta.persistence.*
+
+@Entity
 data class Deck(
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     val nome: String,
-    val cartas: List<Carta> = listOf()
+    @OneToMany(mappedBy = "deck")
+    val carta: List<Carta> = listOf()
 )

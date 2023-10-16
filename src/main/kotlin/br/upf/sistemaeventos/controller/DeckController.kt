@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.util.UriComponentsBuilder
 
 @RestController
-@RequestMapping("/eventos")
+@RequestMapping("/deck")
 class DeckController(val service: DeckService) {
 
     @GetMapping
@@ -44,10 +44,10 @@ class DeckController(val service: DeckService) {
     fun cadastra(@RequestBody @Valid dto: DeckDTO,
                  uriBuilder: UriComponentsBuilder
     ): ResponseEntity<DeckResponseDTO> {
-        val eventoResponse = service.cadastrar(dto)
-        val uri = uriBuilder.path("/eventos/${eventoResponse.id}")
+        val deckResponse = service.cadastrar(dto)
+        val uri = uriBuilder.path("/deck/${deckResponse.id}")
             .build().toUri()
-        return ResponseEntity.created(uri).body(eventoResponse)
+        return ResponseEntity.created(uri).body(deckResponse)
     }
 
     @PutMapping("/{id}")
