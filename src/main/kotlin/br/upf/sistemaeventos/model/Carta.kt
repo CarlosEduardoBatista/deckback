@@ -13,5 +13,5 @@ data class Carta(
     val raridade: String,
     val tipo: String,
     @ManyToOne
-    val deck: Deck,
+    val deck: Deck
     )
