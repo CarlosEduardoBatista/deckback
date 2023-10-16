@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.upf</groupId>
-	<artifactId>sistemaeventos</artifactId>
+	<artifactId>magicdeck</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Sistema de Eventos</name>
-	<description>Sistema de eventos</description>
+	<name>Montador de Decks</name>
+	<description>Montador de decks de Magic the Gathering</description>
 	<properties>
 		<java.version>17</java.version>
 		<kotlin.version>1.8.22</kotlin.version>
