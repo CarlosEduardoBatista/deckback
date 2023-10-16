@@ -5,9 +5,7 @@ CREATE TABLE `carta` (
  `mana` integer NOT NULL,
  `artista` varchar(255) NOT NULL,
  `raridade` varchar(255) NOT NULL,
- `tipo` varchar(255) NOT NULL,
- `id_deck` bigint  NOT NULL,
- FOREIGN KEY (`id_deck`) REFERENCES `deck` (`id`)
+ `tipo` varchar(255) NOT NULL
 );
 
 

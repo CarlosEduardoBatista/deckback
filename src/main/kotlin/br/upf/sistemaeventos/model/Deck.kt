@@ -7,6 +7,12 @@ data class Deck(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     val nome: String,
-    @OneToMany(mappedBy = "deck")
-    val carta: List<Carta> = listOf()
+    @ManyToMany
+    @JoinTable(
+        name = "Carta_Deck",
+        joinColumns = [JoinColumn(name = "deck_id")],
+        inverseJoinColumns = [JoinColumn(name = "carta_id")]
+    )
+    val carta: List<Carta> = listOf(),
+    val formato: Formato
 )

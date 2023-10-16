@@ -28,7 +28,7 @@ class SecurityConfigurations(val securityFilter: SecurityFilter) {
             }
             .authorizeHttpRequests {
                 it.requestMatchers(HttpMethod.POST, "/deck").hasRole("ADMIN")
-                    .requestMatchers(HttpMethod.GET, "/deck", "/deck/*").permitAll()
+                    .requestMatchers(HttpMethod.GET, "/deck", "/deck/*", "/carta", "/carta/*").permitAll()
                     .requestMatchers("/deck/*").hasRole("ADMIN")
                     .requestMatchers("/auth/*").permitAll()
                     .requestMatchers("/usuarios/*").hasRole("ADMIN")

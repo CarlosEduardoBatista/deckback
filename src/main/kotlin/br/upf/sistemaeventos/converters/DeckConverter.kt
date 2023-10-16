@@ -10,7 +10,8 @@ class DeckConverter {
     fun toDeck(dto: DeckDTO): Deck {
         return Deck(
             nome = dto.nome,
-            carta = listOf()
+            carta = listOf(),
+            formato = dto.formato
         )
     }
 
@@ -18,7 +19,8 @@ class DeckConverter {
         return DeckResponseDTO(
             id = deck.id,
             nome = deck.nome,
-            carta = deck.carta
+            carta = deck.carta,
+            formato = deck.formato
         )
     }
 }
